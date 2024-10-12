@@ -46,7 +46,7 @@ module.exports = {
 
         // Add reactions for voting (regional indicator emojis for A, B, C, etc.)
         for (let i = 0; i < uniqueOptions.length; i++) {
-            const emoji = String.fromCodePoint(0x1F1E6 + i); // Regional Indicator Symbol for A, B, C, ...
+            const emoji = String.fromCodePoint(0x1F1E6 + i); 
             await pollMessage.react(emoji);
         }
 
@@ -54,7 +54,7 @@ module.exports = {
         const pollData = {
             question: question,
             options: uniqueOptions,
-            messageId: pollMessage.id, // Store message ID for future reference (e.g., to tally votes)
+            messageId: pollMessage.id, 
             timestamp: currDate.toDateString(),
         };
 

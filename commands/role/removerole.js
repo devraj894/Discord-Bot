@@ -64,7 +64,7 @@ module.exports = {
                 timestamp: currDate.toDateString()
             };
 
-            await roleRemovalRef.push(removalData); // Store removal data in Firebase
+            await roleRemovalRef.push(removalData); 
 
             await interaction.editReply({ content: `Successfully removed the role ${role.name} from ${user.username}.` });
         } catch (error) {

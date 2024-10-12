@@ -31,14 +31,14 @@ module.exports = {
             userId: interaction.user.id,
             task: task,
             time: timeString,
-            timestamp: currDate.toDateString() + timeInMs // Calculate the exact time for the reminder
+            timestamp: currDate.toDateString() + timeInMs 
         };
 
-        await reminderRef.push(reminderData); // Store reminder data in Firebase
+        await reminderRef.push(reminderData); 
 
         // Set a timeout to send the reminder
         setTimeout(async () => {
-            const user = await interaction.client.users.fetch(interaction.user.id); // Fetch user to send DM
+            const user = await interaction.client.users.fetch(interaction.user.id);
             if (user) {
                 await user.send(`Reminder: ${task}`);
             }

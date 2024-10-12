@@ -12,7 +12,7 @@ module.exports = {
         .addStringOption(option => 
             option.setName('reason')
                   .setDescription('The reason to warn')
-                  .setRequired(true)), // Set as required
+                  .setRequired(true)), 
     async execute(interaction) {
         const targetUser = interaction.options.getUser('target');
         const reason = interaction.options.getString('reason') || "No reason provided"; 

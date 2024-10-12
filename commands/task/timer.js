@@ -34,7 +34,7 @@ module.exports = {
 
         // Set a timeout for the timer
         setTimeout(async () => {
-            const user = await interaction.client.users.fetch(interaction.user.id); // Fetch user to send DM
+            const user = await interaction.client.users.fetch(interaction.user.id); 
             if (user) {
                 await user.send(`⏰ Time's up! Your timer for ${durationString} has finished.`);
             }

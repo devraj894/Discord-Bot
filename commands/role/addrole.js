@@ -53,7 +53,7 @@ module.exports = {
             await member.roles.add(role);
 
             // Log the role assignment to Firebase
-            const roleAssignmentRef = db.ref('commandUsage/role/addrole'); // Reference to the roleAssignments node
+            const roleAssignmentRef = db.ref('commandUsage/role/addrole');
             const currDate = new Date();
             const assignmentData = {
                 userId: user.id,
@@ -64,7 +64,7 @@ module.exports = {
                 timestamp: currDate.toDateString()
             };
 
-            await roleAssignmentRef.push(assignmentData); // Store assignment data in Firebase
+            await roleAssignmentRef.push(assignmentData); 
 
             await interaction.editReply({ content: `Successfully added the role ${role.name} to ${user.username}.` });
         } catch (error) {

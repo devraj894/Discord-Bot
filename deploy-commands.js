@@ -51,7 +51,6 @@ const rest = new REST().setToken(process.env.TOKEN);
 
         console.log('Successfully logged command registrations to Firebase.');
     } catch (error) {
-        // And of course, make sure you catch and log any errors!
         console.error(error);
     }
 })();
