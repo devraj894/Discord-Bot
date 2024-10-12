@@ -1,11 +1,13 @@
 const admin = require("firebase-admin");
-const serviceAccount = require("../serviceAccount.json");
-require('dotenv/config');
+const fs = require("fs");
+require('dotenv/config'); 
 
 try {
+  const serviceAccount = JSON.parse(fs.readFileSync('/etc/secrets/serviceAccount.json', 'utf8'));
+
   admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-    databaseURL: process.env.DATABASE_URL
+    databaseURL: process.env.DATABASE_URL 
   });
   console.log("Firebase Admin SDK initialized successfully");
 } catch (error) {
