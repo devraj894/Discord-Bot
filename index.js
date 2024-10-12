@@ -3,10 +3,19 @@ const fs = require('fs');
 const path = require('path');
 const { time } = require('console');
 const db = require('./firebase/firebaseClient');
+const express = require('express');
 require('dotenv/config');
 
-const client = new Client({intents: [GatewayIntentBits.Guilds]});
+const app = express();
+const PORT = process.env.PORT || 3000;
 
+app.get('/', (req, res) => res.send('Bot is running!'));
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
+
+const client = new Client({intents: [GatewayIntentBits.Guilds]});
 client.commands = new Collection();
 
 const foldersPath = path.join(__dirname, 'commands');
