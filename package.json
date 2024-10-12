@@ -1,0 +1,19 @@
+{
+  "name": "discord",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.5",
+    "firebase": "^10.14.1",
+    "firebase-admin": "^12.6.0",
+    "node-fetch": "^2.7.0",
+    "openai": "^4.67.3"
+  }
+}
