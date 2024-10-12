@@ -1,7 +1,6 @@
 const {Client, Collection, Events, GatewayIntentBits} = require('discord.js');
 const fs = require('fs');
 const path = require('path');
-const { time } = require('console');
 const db = require('./firebase/firebaseClient');
 const express = require('express');
 require('dotenv/config');
