@@ -2,7 +2,7 @@ Discord Bot
 
 Overview
 
-This Discord bot is built using Discord.js and deployed on Vercel. It offers a variety of commands categorized into different features such as Basic, Fun, Info, Interaction, Moderation, Role, Task, and Utility.
+This Discord bot is built using Discord.js and deployed on Render. It offers a variety of commands categorized into different features such as Basic, Fun, Info, Interaction, Moderation, Role, Task, and Utility.
 
 How to Add the Bot to Your Server
 
@@ -73,7 +73,7 @@ Bot Features & Commands
 
 Deployment
 
-This bot is deployed on Vercel. 
+This bot is deployed on Render. 
 
 Support
 
